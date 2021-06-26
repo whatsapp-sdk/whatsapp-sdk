@@ -2,7 +2,7 @@
 
 ### About
 
-WhatsApp-SDK-Nodejs is a nodejs library based on the latest Android version of WhatsApp, you can use this library to build any application you want, such as chatting with WhatsApp users, group messages, etc. If you need uto use this SDK for marketing, you can send email me: whatsappsdk@qq.com
+WhatsApp-SDK-Nodejs is a nodejs library based on the latest Android version of WhatsApp, it provides standard socket and HTTP interface, you can use any other language to build any application you want, such as chatting with WhatsApp users, group messages, etc. If you need to use this SDK for marketing, you can send email me: whatsappsdk@qq.com
 
 联系QQ：8O94O528（请将O替换为数字0）
 
