@@ -4,7 +4,8 @@
   "description": "whatsapp sdk",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "protobuf": "pbjs -t static-module -w commonjs protobuf/* -o src/pb.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/whatsapp-sdk/whatsapp-sdk/issues"
   },
-  "homepage": "https://github.com/whatsapp-sdk/whatsapp-sdk#readme"
+  "homepage": "https://github.com/whatsapp-sdk/whatsapp-sdk#readme",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "bunyan-debug-stream": "^3.0.2",
+    "protobufjs": "^6.11.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-egg": "^11.1.0"
+  }
 }

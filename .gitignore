@@ -30,3 +30,4 @@ site/dist
 
 .umi
 .umi-production
+.vscode

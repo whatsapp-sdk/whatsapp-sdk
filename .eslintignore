@@ -3,3 +3,4 @@ examples/**/app/public
 logs
 run
 docs/node_modules
+src/pb.js
