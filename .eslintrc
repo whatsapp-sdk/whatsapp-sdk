@@ -1,9 +1,17 @@
 {
   "extends": "eslint-config-egg",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018
   },
   "rules":{
-    "strict": 0
+    "strict": 0,
+    "no-unused-vars": 1,
+    "array-bracket-spacing":0,
+    "no-bitwise": 1
   }
 }

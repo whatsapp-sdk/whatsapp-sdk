@@ -3,8 +3,13 @@ const bunyan = require('bunyan');
 const bunyanDebugStream = require('bunyan-debug-stream');
 const path = require('path');
 
-const isDev = process.env.NODE_ENV === 'test';
+const fse = require('fs-extra');
+
+const isDev = process.env.NODE_ENV !== 'production';
 const logPath = isDev ? path.join(__dirname, '../run/whatsapp.log') : '/root/logs/whatsapp/whatsapp.log';
+
+
+fse.ensureFileSync(logPath);
 
 const streams = [
   {
@@ -19,7 +24,7 @@ const streams = [
 streams.push({
   level: 'debug',
   type: 'raw',
-  stream: bunyanDebugStream({
+  stream: bunyanDebugStream.create({
     forceColor: true,
   }),
 });
