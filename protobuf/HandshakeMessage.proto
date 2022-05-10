@@ -1,0 +1,26 @@
+package HandshakeMessage;
+syntax = "proto2";
+
+
+message ClientHello {
+  optional bytes ephemeral = 1;
+  optional bytes static = 2;
+  optional bytes payload = 3;
+}
+
+message ServerHello {
+  optional bytes ephemeral = 1;
+  optional bytes static = 2;
+  optional bytes payload = 3;
+}
+
+message ClientFinish{
+  optional bytes static = 1;
+  optional bytes payload = 2;
+}
+
+message HandshakeMessage{
+  optional ClientHello client_hello = 2;
+  optional ServerHello server_hello = 3;
+  optional ClientFinish client_finish = 4;
+}

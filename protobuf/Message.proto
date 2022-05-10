@@ -1,0 +1,178 @@
+package Message;
+syntax = "proto2";
+
+
+message SenderKeyMessage {
+  optional uint32 id = 1;
+  optional uint32 iteration = 2;
+  optional bytes ciphertext = 3;
+}
+
+message SenderChainKey {
+  optional uint32 iteration = 1;
+  optional bytes seed = 2;
+}
+
+message SenderMessageKey {
+  optional uint32 iteration = 1;
+  optional bytes seed = 2;
+}
+
+message SenderSigningKey {
+  optional bytes public = 1;
+  optional bytes private = 2;
+}
+
+message SenderKeyStateStructure {
+  optional uint32 senderKeyId = 1;
+  optional SenderChainKey senderChainKey = 2;
+  optional SenderSigningKey senderSigningKey = 3;
+  repeated SenderMessageKey senderMessageKeys = 4;
+}
+
+message SenderKeyRecordStructure {
+  repeated SenderKeyStateStructure senderKeyStates = 1;
+}
+
+message SenderKeyDistributionMessage {
+  optional int32 id = 1;
+  optional int32 iteration = 2;
+  optional bytes chainKey = 3;
+  optional bytes signingKey = 4;
+}
+
+message WhisperSenderKeyDistributionMessage {
+  optional string groupId = 1;
+  optional bytes axolotl_sender_key_distribution_message = 2;
+}
+
+message ImageMessage {
+  optional string url = 1;
+  optional string mimetype = 2;
+  optional string caption = 3;
+  optional bytes file_sha256 = 4;
+  optional int64 file_length = 5;
+  optional int32 height = 6;
+  optional int32 width = 7;
+  optional bytes media_key = 8;
+  optional bytes jpeg_thumbnail = 16;
+  optional string context_info = 17;
+}
+
+message ContactMessage {
+  optional string display_name = 1;
+  optional string vcard = 2;
+  optional string context_info = 3;
+}
+
+message LocationMessage {
+  optional string degrees_latitude = 1;
+  optional string degrees_longitude = 2;
+  optional string name = 3;
+  optional string address = 4;
+  optional string url = 5;
+  optional string duration = 6;
+  optional string accuracy_in_meters = 7;
+  optional string speed_in_mps = 8;
+  optional string degrees_clockwise_from_magnetic_north = 9;
+  optional string axolotl_sender_key_distribution_message = 10;
+  optional string jpeg_thumbnail = 16;
+  optional string context_info = 17;
+}
+
+message ExtendedTextMessage {
+  optional string text = 1;
+  optional string matched_text = 2;
+  optional string canonical_url = 4;
+  optional string description = 5;
+  optional string title = 6;
+  optional string jpeg_thumbnail = 16;
+  optional string context_info = 17;
+}
+
+message DocumentMessage {
+  optional string url = 1;
+  optional string mimetype = 2;
+  optional string title = 3;
+  optional string file_sha256 = 4;
+  optional string file_length = 5;
+  optional string page_count = 6;
+  optional string media_key = 7;
+  optional string file_name = 8;
+  optional string jpeg_thumbnail = 16;
+  optional string context_info = 17;
+}
+
+message AudioMessage {
+  optional string url = 1;
+  optional string mimetype = 2;
+  optional string file_sha256 = 3;
+  optional string file_length = 4;
+  optional string seconds = 5;
+  optional string ptt = 6;
+  optional string media_key = 7;
+  optional string context_info = 17;
+  optional string streaming_sidecar = 18;
+}
+
+message VideoMessage {
+  optional string url = 1;
+  optional string mimetype = 2;
+  optional string file_sha256 = 3;
+  optional string file_length = 4;
+  optional string seconds = 5;
+  optional string media_key = 6;
+  optional string caption = 7;
+  optional string gif_playback = 8;
+  optional string height = 9;
+  optional string width = 10;
+  optional string jpeg_thumbnail = 16;
+  optional string context_info = 17;
+  optional string streaming_sidecar = 18;
+  optional string gif_attribution = 19;
+}
+
+message Call {
+  optional string call_key = 1;
+}
+
+message Chat {
+  optional string display_name = 1;
+  optional string id = 2;
+}
+
+message ProtocolMessage {
+  optional string key = 1;
+  optional string type = 2;
+}
+
+message ContactsArrayMessage {
+  optional string display_name = 1;
+  optional string contacts = 2;
+  optional string context_info = 3;
+}
+
+message HighlyStructuredMessage {
+  optional string namespace = 1;
+  optional string element_name = 2;
+  optional string params = 3;
+  optional string fallback_lg = 4;
+  optional string fallback_lc = 5;
+}
+
+message Message {
+  optional string conversation = 1;
+  optional WhisperSenderKeyDistributionMessage sender_key_distribution_message = 2;
+  optional ImageMessage image_message = 3;
+  optional ContactMessage contact_message = 4;
+  optional LocationMessage location_message = 5;
+  optional ExtendedTextMessage extended_text_message = 6;
+  optional DocumentMessage document_message = 7;
+  optional AudioMessage audio_message = 8;
+  optional VideoMessage video_message = 9;
+  optional Call call = 10;
+  optional Chat chat = 11;
+  optional ProtocolMessage protocol_message = 12;
+  optional ContactsArrayMessage contacts_array_message = 13;
+  optional HighlyStructuredMessage highly_structured_message = 14;
+}
