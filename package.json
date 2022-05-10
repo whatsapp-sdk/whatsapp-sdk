@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-sdk",
+  "version": "1.0.0",
+  "description": "whatsapp sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatsapp-sdk/whatsapp-sdk.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "sdk"
+  ],
+  "author": "whatsapp-sdk",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16.15.0"
+  },
+  "bugs": {
+    "url": "https://github.com/whatsapp-sdk/whatsapp-sdk/issues"
+  },
+  "homepage": "https://github.com/whatsapp-sdk/whatsapp-sdk#readme"
+}
