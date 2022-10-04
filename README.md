@@ -2,6 +2,10 @@
 
 [English](./README_EN.md) | [简体中文](./README.md)
 
+* 版本查看地址：https://www.whatsapp.com/android/
+* 目前支持的最新版本：2.22.21.71 android 版
+* 更新日期：2022 年 10 月 04 日
+
 私人咨询或定制化需求请联系邮箱：whatsappsdk@qq.com ，或者联系 QQ: 8O94O528（请将O替换为数字0）
 
 ### 关于本项目
