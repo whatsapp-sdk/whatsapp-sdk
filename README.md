@@ -2,7 +2,7 @@
 
 [English](./README_EN.md) | [简体中文](./README.md)
 
-私人咨询或定制化需求请联系邮箱：whatsappsdk@qq.com
+私人咨询或定制化需求请联系邮箱：whatsappsdk@qq.com ，或者联系 QQ: 8O94O528（请将O替换为数字0）
 
 ### 关于本项目
 
